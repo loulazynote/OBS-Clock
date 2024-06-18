@@ -1,0 +1,124 @@
+<!--
+
+Copyright (c) 2020 mooncape
+https://mooncape.net/
+
+Copyright (c) 2018-present, iamkun
+Released under the MIT license
+https://github.com/iamkun/dayjs/blob/dev/LICENSE
+
+-->  
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/dayjs.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+/* ▼ ここでテキストの色を変更 ▼ */
+    color: #a098c5;
+/* ▲ ここでテキストの色を変更 ▲ */
+}
+ 
+.nowtime{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 180px;
+    padding : 12px 10px 5px 10px;
+    border: solid 2px #a098c5;
+    border-radius: 10px;
+}
+
+.live{
+    width: 90px;
+    margin: auto;
+    padding-bottom: 2px;
+}
+    
+#live{
+    display: inline;
+    letter-spacing: 5px;/* 字間 */
+    font-size: 27px;
+}
+
+#icon{
+    display: inline;
+    position: relative;
+    top: 5%;
+    left: -3px;
+    }
+    
+#time{
+    line-height: 1em;/* 行間 */
+    letter-spacing: 3px;/* 字間 */
+    font-size: 60px;
+    /* ▼ ここで線の色を変更 ▼ */
+    border-bottom: solid 2px;
+    /* ▲ ここで線の色を変更 ▲ */
+}
+#bolt{
+    height: 27px;
+    animation: icon 5s linear infinite;
+    fill: currentColor;
+    }
+
+@keyframes icon {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+    }
+
+#date{
+    line-height: 1.5em;/* 行間 */
+    letter-spacing: 3px;
+	font-size: 30px;
+}
+    
+#colon{
+    vertical-align: 7%;
+}
+
+</style>
+</head>
+
+<body>
+<div class="nowtime">
+
+<p id="icon"/>
+<svg id="bolt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 30"><polygon id="bolt-2" data-name="bolt" points="12.4 0 1 18 9.2 18 7.617 30 19 12 10.8 12 12.4 0"/></svg>
+<p id="live">LIVE</p>
+<!-- <div class="live">
+<div id="live">LIVE</div>
+</div> -->
+
+<!-- ここから時刻 -->
+<p id="t"/>
+  <script language="JavaScript">
+  const day = function() {
+    const dt = dayjs(new Date());
+    const element = document.getElementById("t");
+      element.innerHTML = `<div id="time">${dt.format('HH')}<span id="colon">:</span>${dt.format('mm')}</div>
+                           <div id="date">${dt.format('MM/DD ddd')}</div>`;
+  };
+  setInterval(day, 1000);
+  </script>
+<!-- ここまで時刻 -->
+
+</div>
+</body>
+</html>

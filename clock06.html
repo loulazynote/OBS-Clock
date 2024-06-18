@@ -1,0 +1,131 @@
+<!--
+Copyright (c) 2024 loulazynote
+https://loulazynote.github.io/
+
+Copyright (c) 2020 mooncape
+https://mooncape.net/
+
+Copyright (c) 2018-present, iamkun
+Released under the MIT license
+https://github.com/iamkun/dayjs/blob/dev/LICENSE
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/dayjs.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                /* ▼ 在此變更文字顏色▼ */
+                color: #ffaaaa;
+                /* ▲ 在此變更文字顏色 ▲ */
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* animation */
+            @keyframes vibrate {
+                0% {
+                    transform: translateY(0);
+                }
+                25% {
+                    transform: translateY(-5px);
+                }
+                50% {
+                    transform: translateY(0);
+                }
+                75% {
+                    transform: translateY(5px);
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            .nowtime {
+                /*position: absolute;*/
+                /*top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);*/
+                width: 265px;
+                padding: 10px 10px 5px 10px;
+                /* margin-top: 10px; */
+                /* border-radius: 10px 10px 10px 10px; */
+                border-radius: 40px;
+                /* ▼ 在這裡更改背景顏色 ▼ */
+                background: rgba(0, 0, 0, 0.7);
+                /* ▲ 在這裡更改背景顏色 ▲ */
+                border: solid 5px #ffaaaa;
+                animation: vibrate 1s infinite; /* 動畫持續1秒，無限次重複 */
+            }
+
+            #time {
+                line-height: 1em; /* 行間 */
+                letter-spacing: 3px; /* 字間 */
+                font-size: 60px;
+                /* ▼ 在此更改線條顏色 ▼ */
+                border-bottom: solid 2px;
+                /* ▲ 在此更改線條顏色 ▲ */
+            }
+
+            #date {
+                line-height: 1.5em; /* 行間 */
+                letter-spacing: 3px;
+                font-size: 50px;
+            }
+
+            #day {
+                margin-left: 15px;
+                color: #b8f546;
+            }
+
+            #sec {
+                display: inline;
+                line-height: 1em; /* 行間 */
+                letter-spacing: 1px; /* 字間 */
+                font-size: 50px;
+            }
+
+            #colon {
+                vertical-align: 7%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="nowtime">
+                <!-- 從這裡開始的時間 -->
+                <p id="t" />
+                <script language="JavaScript">
+                    const day = function () {
+                        const dt = dayjs(new Date());
+                        const element = document.getElementById('t');
+                        element.innerHTML = `<div id="time">${dt.format('HH')}<span id="colon">:</span>${dt.format(
+                            'mm'
+                        )}<span id="colon">:</span><span id="sec">${dt.format('ss')}</span></div>
+                           <div id="date">${dt.format('M.DD')}<span id="day">${dt.format('ddd')}</span></div>`;
+                    };
+                    setInterval(day, 1000);
+                </script>
+                <!-- 從這裡結束的時間 -->
+            </div>
+        </div>
+    </body>
+</html>
