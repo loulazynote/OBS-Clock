@@ -9,14 +9,13 @@ OBSのソース「ブラウザ」から追加してご利用ください。
 動画や配信の収益化による制限などもございません。
 
 ご使用にあたり、クレジット表記やご利用報告の義務はありません。
-表記いただける場合には「mooncape」と記載していただけると嬉しいです。
+表記いただける場合には「[mooncape](https://mooncape.net/)」と記載していただけると嬉しいです。
 
 みなさまの活動のお力添えができれば幸いです。
 ご不明な点などがありましたら、TwitterやHP等からお気軽にお問い合わせください。
 
-mooncape | MinozKi
-https://mooncape.net/
-https://twitter.com/minozki_i
+- mooncape : https://mooncape.net/
+- MinozKi : https://twitter.com/minozki_i
 </P>
 
 ## 修改者：
