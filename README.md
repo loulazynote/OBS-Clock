@@ -1,3 +1,11 @@
+## 修改者 editor：
+
+- 本人根據原作者的Code修改成全新的Clock06, 並無侵權之意
+- I modified it into a brand new Clock06 based on the original author's Code, no infringement intended.
+- 如需使用 請標註原作者的簽名
+- If you need to use it, please mark it with the original author's signature.
+
+
 ## 原作者 original author：
 
 <p>
@@ -30,10 +38,3 @@ If you have any questions, please contact us via Twitter or our website.
 - mooncape : https://mooncape.net/
 - MinozKi : https://twitter.com/minozki_i
 </P>
-
-## 修改者 editor：
-
-- 本人根據原作者的Code修改成全新的Clock06, 並無侵權之意
-- I modified it into a brand new Clock06 based on the original author's Code, no infringement intended.
-- 如需使用 請標註原作者的簽名
-- If you need to use it, please mark it with the original author's signature.
